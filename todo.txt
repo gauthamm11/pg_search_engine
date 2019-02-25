@@ -7,3 +7,9 @@ select * from chn_areas where match (a_name,a_sub,a_pin,landmarks) against('poru
 select * from chn_areas where match (soundex(a_name),soundex(a_sub),soundex(a_pin),soundex(landmarks)) against(soundex('porur'))
 
  SELECT * FROM chn_areas WHERE ( (soundex(a_name) LIKE soundex('porur')) OR (soundex(a_sub) LIKE soundex('porur')) )OR ( (soundex(a_name) LIKE soundex('porur')) OR (soundex(a_sub) LIKE soundex('porur')) ) OR a_name in (select a_name from chn_areas where a_name like '%kan%' or a_sub like'%north%') order by a_rating;
+
+
+ // animations
+ https://webdesign.tutsplus.com/tutorials/silky-smooth-web-animation-with-velocityjs--cms-24266
+
+ https://daneden.github.io/animate.css/
