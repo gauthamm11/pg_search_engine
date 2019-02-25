@@ -9,7 +9,7 @@ $search = mysqli_real_escape_string($conn, $_GET['search']);
 
 $myArray = explode(',', $search);
 
-$conX = "SELECT * FROM chn_areas WHERE ";
+$conX = "SELECT chn_areas.a_id, chn_areas.a_name, chn_areas.a_sub, chn_areas.a_pin, chn_areas.landmarks, chn_pg.p_name, chn_pg.p_id, chn_pg.p_rent_min, chn_pg.p_rent_max, chn_pg.p_deposit, chn_pg.p_food, chn_pg.p_sharing, chn_pg.p_rating, chn_pg.p_dp FROM chn_areas INNER JOIN chn_pg ON chn_areas.a_id = chn_pg.a_id WHERE ";
 
 $supp = " OR a_name IN (SELECT a_name FROM chn_areas WHERE";
 
@@ -29,7 +29,7 @@ foreach($myArray as $my_Array){
     }else {
     	$or = "OR";
     }
-	$conY .= "( (soundex(a_name) LIKE soundex('".$my_Array."')) OR (soundex(a_sub) LIKE soundex('".$my_Array."')) )".$or." ";
+	$conY .= "( (soundex(a_name) LIKE soundex('".$my_Array."')) OR (soundex(a_sub) LIKE soundex('".$my_Array."')) ) ".$or." ";
 	$conZ .= " (a_name LIKE '%".$my_Array."%') OR (a_sub LIKE '%".$my_Array."%') ".$or." ";
 
 }

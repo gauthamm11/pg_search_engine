@@ -9,6 +9,8 @@ select * from chn_areas where match (soundex(a_name),soundex(a_sub),soundex(a_pi
  SELECT * FROM chn_areas WHERE ( (soundex(a_name) LIKE soundex('porur')) OR (soundex(a_sub) LIKE soundex('porur')) )OR ( (soundex(a_name) LIKE soundex('porur')) OR (soundex(a_sub) LIKE soundex('porur')) ) OR a_name in (select a_name from chn_areas where a_name like '%kan%' or a_sub like'%north%') order by a_rating;
 
 
+triggers to update visits
+
  // animations
  https://webdesign.tutsplus.com/tutorials/silky-smooth-web-animation-with-velocityjs--cms-24266
 
