@@ -10,6 +10,7 @@ require "conn.php";
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="img/effort.png" sizes="16x16" type="image/png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -78,17 +79,24 @@ return false;
 <!-- nav close -->
 
 <!-- main content start -->
-<div class="container" id="result">
-
-<div class="card shadow-lg p-0 mb-2 bg-white">
-  <div class="card-body">
-<img src="img/noresbw.svg" class="img-fluid mx-auto d-block" width="150px">
-  </div>
-</div>
-
+<div class="container mb-5" id="result">
 
 </div>
 <!-- main content finish -->
-
+<!-- footer open -->
+<nav class="navbar justify-content-center fixed-bottom">
+<div class="bg-info text-center text-white sha">
+&nbsp;
+<i class="fa fa-copyright"></i>
+&nbsp;
+<?php
+$copyYear = 2019; // Set your website start date
+$curYear = date('Y'); // Keeps the second year updated
+echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
+?>
+<span>&nbsp;Copyright @ Cruze Technologies.&nbsp;</span>
+</div>
+</nav>
+<!-- footer close -->
 </body>
 </html>

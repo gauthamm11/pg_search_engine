@@ -20,3 +20,4 @@ triggers to update visits
 
  ------------------------------------------------
  store search results in json and use it for loading
+ bug while putting , and searching
