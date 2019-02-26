@@ -79,7 +79,7 @@ return false;
 <!-- nav close -->
 
 <!-- main content start -->
-<div class="container mb-5" id="result">
+<div class="container mb-5 text-capitalize" id="result">
 
 </div>
 <!-- main content finish -->
