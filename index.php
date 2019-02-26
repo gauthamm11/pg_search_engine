@@ -23,9 +23,6 @@ require "conn.php";
 		-moz-box-shadow: 0px 15px 54px 0px rgba(143,143,143,1);
 		box-shadow: 0px 15px 54px 0px rgba(143,143,143,1);
 	}
-	.subt{
-		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-	}
 </style>
 
 <script>
