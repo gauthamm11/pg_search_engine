@@ -22,8 +22,7 @@ $or = "";
 // query v1.1 stable close
 
 foreach($myArray as $my_Array){
-	// ((a_name like '%north%') or (a_name like '%usman%'))
-	// select * from chn_areas where (soundex(a_name) like soundex('poruur'))
+
 	if( !next( $myArray ) ) {
         $or = "";
     }else {
@@ -36,6 +35,24 @@ foreach($myArray as $my_Array){
 
 $searchQ = $conX.$conY.$supp.$conZ.") ORDER BY a_rating";
 
-echo $searchQ;
+?>
+
+<?php
+$sql = "SELECT * FROM chn_areas WHERE a_id = 'qwerty'";
+
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        echo $row["a_id"];
+    }
+} else {
+    echo '
+    <div class="card shadow-lg p-0 mb-2 bg-white">
+  <div class="card-body">No Results!</div>
+</div>';
+}
+
 
 ?>

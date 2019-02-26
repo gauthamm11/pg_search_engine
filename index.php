@@ -16,10 +16,20 @@ require "conn.php";
 </head>
 <body class="container-fluid p-0" class="text-justify">
 
+<style>
+	.sha{
+		-webkit-box-shadow: 0px 15px 54px 0px rgba(143,143,143,1);
+		-moz-box-shadow: 0px 15px 54px 0px rgba(143,143,143,1);
+		box-shadow: 0px 15px 54px 0px rgba(143,143,143,1);
+	}
+</style>
+
 <script>
 $(document).ready(function () {
 
-			var space = '<br><div class="alert text-center alert-dark alert-dismissible fade show col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mx-auto"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Enter Area or Street !</strong><br><i>Example:</i> Porur, Shakthi Nagar</div>';
+var space = '<br><div class="alert text-center alert-dark alert-dismissible fade show col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mx-auto"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Enter Area Or Street Name!</strong><br><i>Example:</i> Porur Or Shakthi Nagar</div>';
+
+var lodSpin = '<center class="mt-5"><div class="spinner-grow text-muted mr-sm-5"></div><div class="spinner-grow text-primary mr-sm-5"></div><div class="spinner-grow text-success mr-sm-5"></div><div class="spinner-grow text-info mr-sm-5"></div><div class="spinner-grow text-warning mr-sm-5"></div><div class="spinner-grow text-danger mr-sm-5"></div><div class="spinner-grow text-secondary mr-sm-5"></div><div class="spinner-grow text-dark"></div></center>';
 
 // form submit open
 $('#form_id').on('submit', function (e) {
@@ -29,6 +39,7 @@ $('#form_id').on('submit', function (e) {
                 var trimStr = $.trim(search);
 
                 if (trimStr != null && trimStr != '') {
+                	$("#result").html(lodSpin);
                 	$.ajax({
                 		type: "GET",
                 		url: 'search.php',
@@ -53,13 +64,13 @@ return false;
 <!-- nav open -->
 <nav class="navbar navbar-expand-sm bg-light justify-content-center sticky-top">
 	<form action="search.php" id="form_id" class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" method="GET">
-		<div class="input-group mt-4 shadow-lg p-0 mb-4 bg-light">
+		<div class="input-group mt-4 p-0 mb-4 bg-light sha">
 			<div class="input-group-prepend">
 				<button class="btn btn-info" type="button"><strong>Chennai</strong></button> 
 			</div>
-			<input type="text" id="search"  placeholder="Enter Area or Street" class="form-control form-control-lg text-capitalize text-monospace" required autofocus/>
+			<input type="text" id="search"  placeholder="Enter Area or Street Name" class="form-control form-control-lg text-capitalize text-monospace" autofocus/>
 			<div class="input-group-append">
-				<button class="btn btn-info" id="subm" type="submit"><img src="img/search.png" class="img-fluid"></button> 
+				<button class="btn btn-info" id="subm" type="submit"><img src="img/search.svg" width="32px" height="auto" class="img-fluid"></button> 
 			</div>
 		</div>
 	</form>
@@ -68,6 +79,14 @@ return false;
 
 <!-- main content start -->
 <div class="container" id="result">
+
+<div class="card shadow-lg p-0 mb-2 bg-white">
+  <div class="card-body">
+<img src="img/noresbw.svg" class="img-fluid mx-auto d-block" width="150px">
+  </div>
+</div>
+
+
 </div>
 <!-- main content finish -->
 
