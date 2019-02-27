@@ -26,9 +26,6 @@ require "conn.php";
 </style>
 
 <script>
-
-
-
 $(document).ready(function () {
 
 var space = '<br><div class="alert text-center alert-dark alert-dismissible fade show col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mx-auto"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Enter Area Or Street Name!</strong><br><i>Example:</i> Porur Or Shakthi Nagar</div>';
@@ -78,7 +75,7 @@ return false;
 <!-- nav open -->
 <nav class="navbar navbar-expand-sm bg-light justify-content-center sticky-top">
 	<form action="search.php" id="form_id" class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" method="GET">
-		<div class="input-group mt-4 p-0 mb-4 bg-light sha">
+		<div class="input-group mt-4 p-0 mb-2 bg-light sha">
 			<div class="input-group-prepend">
 				<button class="btn btn-info" type="button"><strong>Chennai</strong></button> 
 			</div>

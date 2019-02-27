@@ -109,28 +109,28 @@ if (mysqli_num_rows($result) > 0) {
         <div class="col-xl-3 col-lg-3">
         <img src="https://via.placeholder.com/300x175?text=Loading..." class="img-fluid mx-auto d-block" style="">
         </div>
-        <div class="col-xl-9 col-lg-9" style="/*font-size:20px*/">
+        <div class="col-xl-9 col-lg-9" style="/*font-size:20px*/ font-weight: 500;">
         
         <div class="row">
        
         <div class="col">
 <div class="d-inline-flex">
-<div><i class="fas fa-building fa-fw"></i></div>
-<div>&nbsp;'.$row["p_name"].'</div>
+<div><i class="fas fa-building fa-fw text-info"></i></div>
+<div>&nbsp;<b class="text-info">'.$row["p_name"].'</b></div>
 </div></div>
 
 
         <div class="col">
 <div class="d-inline-flex">
-<div><i class="fas fa-venus-mars fa-fw"></i></div>
-<div>&nbsp;<b>For:</b>&nbsp;</div>
+<div><i class="fas fa-venus-mars fa-fw text-info"></i></div>
+<div>&nbsp;<b class="text-info">For:</b>&nbsp;</div>
 <div>'.$type.'</div>
 </div></div>
 
 <div class="col">
 <div class="d-inline-flex">
-<div><i class="fas fa-star fa-fw"></i></div>
-<div>&nbsp;<b>Rating:</b>&nbsp;</div>
+<div><i class="fas fa-star fa-fw text-info"></i></div>
+<div>&nbsp;<b class="text-info">Rating:</b>&nbsp;</div>
 <div>'.$row["p_rating"].'</div>
 </div></div>        
 
@@ -140,22 +140,22 @@ if (mysqli_num_rows($result) > 0) {
         
 <div class="col">
 <div class="d-inline-flex">
-<div><i class="fas fa-rupee-sign fa-fw"></i></div>
-<div>&nbsp;<b>Rent:</b>&nbsp;</div>
-<div>'.$row["p_rent_min"].'</div>
+<div><i class="fas fa-rupee-sign fa-fw text-info"></i></div>
+<div>&nbsp;<b class="text-info">Rent:</b>&nbsp;</div>
+<div>'.$row["p_rent_min"].'+</div>
 </div></div>
 
 <div class="col">
 <div class="d-inline-flex">
-<div><i class="fas fa-bed fa-fw"></i></div>
-<div>&nbsp;<b>Type:</b>&nbsp;</div>
+<div><i class="fas fa-bed fa-fw text-info"></i></div>
+<div>&nbsp;<b class="text-info">Type:</b>&nbsp;</div>
 <div>'.$sh.'</div>
 </div></div>
 
 <div class="col">
 <div class="d-inline-flex">
-<div><i class="fas fa-hard-hat fa-fw"></i></div>
-<div>&nbsp;<b>Food:</b>&nbsp;</div>
+<div><i class="fas fa-hard-hat fa-fw text-info"></i></div>
+<div>&nbsp;<b class="text-info">Food:</b>&nbsp;</div>
 <div>'.$food.'</div>
 </div></div>
 
@@ -163,19 +163,19 @@ if (mysqli_num_rows($result) > 0) {
         <hr class="bg-info">
 
 
-        <div class="row mb-2">
+        <div class="row mb-3">
         
-        <div class="col"><i class="fas fa-map fa-fw"></i>&nbsp;<b>Area:</b>&nbsp;'.$row["a_name"].',&nbsp;'.$row["a_sub"].',&nbsp;<i>'.$row["a_pin"].'</i></div>
+        <div class="col"><i class="fas fa-map fa-fw text-info"></i>&nbsp;<b class="text-info">Area:</b>&nbsp;'.$row["a_name"].',&nbsp;'.$row["a_sub"].',&nbsp;<i>'.$row["a_pin"].'</i></div>
 
 <div class="col">
 <div class="d-inline-flex">
-<div><i class="fas fa-map-marker-alt fa-fw"></i></div>
-<div>&nbsp;<b>Landmark:</b>&nbsp;'.$row["p_landmark"].'</div>
+<div><i class="fas fa-map-marker-alt fa-fw text-info"></i></div>
+<div>&nbsp;<b class="text-info">Landmark:</b>&nbsp;'.$row["p_landmark"].'</div>
 </div></div>
 
         </div>
         
-      <button type="button" class="btn btn-info btn-block viewc" data-value="'.$row["p_id"].'">View Full Details&nbsp;<i class="fas fa-eye"></i></button>
+      <button type="button" class="btn btn-info btn-block viewc" data-value="'.$row["p_id"].'"><b>View Full Details&nbsp;<i class="fas fa-eye"></i></b></button>
         </div>
         ';
         echo '</div></div>';
