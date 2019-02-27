@@ -3,8 +3,22 @@ require "conn.php";
 if (!isset($_GET['search'])) {
     header("location: index.php");
 }
+?>
+
+<script>
+$(document).ready(function () {
+
+$(".viewc").click(function () {
+$("#view").modal();
+//alert($(this).attr('data-value'));
+});
+
+return false;
+});
+</script>
 
 
+<?php
 $search = mysqli_real_escape_string($conn, $_GET['search']);
 
 $myArray = explode(',', $search);
@@ -95,22 +109,21 @@ if (mysqli_num_rows($result) > 0) {
         <div class="col-xl-3 col-lg-3">
         <img src="https://via.placeholder.com/300x175?text=Loading..." class="img-fluid mx-auto d-block" style="">
         </div>
-        <div class="col-xl-9 col-lg-9" style="font-size:20px">
+        <div class="col-xl-9 col-lg-9" style="/*font-size:20px*/">
         
         <div class="row">
        
         <div class="col">
 <div class="d-inline-flex">
 <div><i class="fas fa-building fa-fw"></i></div>
-<div>&nbsp;<b>Name:</b>&nbsp;</div>
-<div>'.$row["p_name"].'</div>
+<div>&nbsp;'.$row["p_name"].'</div>
 </div></div>
 
 
         <div class="col">
 <div class="d-inline-flex">
 <div><i class="fas fa-venus-mars fa-fw"></i></div>
-<div>&nbsp;<b>Gender:</b>&nbsp;</div>
+<div>&nbsp;<b>For:</b>&nbsp;</div>
 <div>'.$type.'</div>
 </div></div>
 
@@ -121,24 +134,48 @@ if (mysqli_num_rows($result) > 0) {
 <div>'.$row["p_rating"].'</div>
 </div></div>        
 
-        </div><hr>
+        </div><hr class="bg-info">
 
         <div class="row">
-        <div class="col"><i class="fas fa-rupee-sign fa-fw"></i>&nbsp;<b>Rent:</b>&nbsp;'.$row["p_rent_min"].'+</div>
-        <div class="col"><i class="fas fa-bed fa-fw"></i>&nbsp;<b>Type:</b>&nbsp;'.$sh.'</div>
-        <div class="col"><i class="fas fa-hard-hat fa-fw"></i>&nbsp;<b>Food:</b>&nbsp;'.$food.'</div>
+        
+<div class="col">
+<div class="d-inline-flex">
+<div><i class="fas fa-rupee-sign fa-fw"></i></div>
+<div>&nbsp;<b>Rent:</b>&nbsp;</div>
+<div>'.$row["p_rent_min"].'</div>
+</div></div>
+
+<div class="col">
+<div class="d-inline-flex">
+<div><i class="fas fa-bed fa-fw"></i></div>
+<div>&nbsp;<b>Type:</b>&nbsp;</div>
+<div>'.$sh.'</div>
+</div></div>
+
+<div class="col">
+<div class="d-inline-flex">
+<div><i class="fas fa-hard-hat fa-fw"></i></div>
+<div>&nbsp;<b>Food:</b>&nbsp;</div>
+<div>'.$food.'</div>
+</div></div>
+
       </div>
         <hr class="bg-info">
 
 
         <div class="row mb-2">
+        
         <div class="col"><i class="fas fa-map fa-fw"></i>&nbsp;<b>Area:</b>&nbsp;'.$row["a_name"].',&nbsp;'.$row["a_sub"].',&nbsp;<i>'.$row["a_pin"].'</i></div>
-        <div class="col"><i class="fas fa-map-marker-alt fa-fw"></i>&nbsp;<b>Landmark:</b>&nbsp;'.$row["p_landmark"].'</div>
+
+<div class="col">
+<div class="d-inline-flex">
+<div><i class="fas fa-map-marker-alt fa-fw"></i></div>
+<div>&nbsp;<b>Landmark:</b>&nbsp;'.$row["p_landmark"].'</div>
+</div></div>
+
         </div>
         
-      
-
-      <button type="button" class="btn btn-info btn-block">View Full Details</button>
+      <button type="button" class="btn btn-info btn-block viewc" data-value="'.$row["p_id"].'">View Full Details&nbsp;<i class="fas fa-eye"></i></button>
         </div>
         ';
         echo '</div></div>';
@@ -159,6 +196,31 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 ?>
+
+<!-- The Modal open -->
+        <div class="modal fade" data-backdrop="static" id="view">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">PG Details:</h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body" id="viewbody">
+                       <center class="my-5"><div class="spinner-grow text-muted mr-sm-5"></div><div class="spinner-grow text-primary mr-sm-5"></div><div class="spinner-grow text-success mr-sm-5"></div><div class="spinner-grow text-info mr-sm-5"></div><div class="spinner-grow text-warning mr-sm-5"></div><div class="spinner-grow text-danger mr-sm-5"></div><div class="spinner-grow text-secondary mr-sm-5"></div><div class="spinner-grow text-dark"></div></center>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div> -->
+                </div>
+            </div>
+        </div>
+<!-- The Modal close -->
 
 <nav class="navbar justify-content-center">
 <div class="bg-info text-center text-white sha">
