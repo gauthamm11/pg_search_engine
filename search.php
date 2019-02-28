@@ -125,7 +125,7 @@ if (mysqli_num_rows($result) > 0) {
         echo '<div class="card sha border border-info mb-3"><div class="card-body row">';
         echo '
         <div class="col-xl-3 col-lg-3">
-        <img src="https://via.placeholder.com/300x175?text=Loading..." class="img-fluid mx-auto d-block" style="">
+        <img src="https://via.placeholder.com/300x175?text=300x175" class="img-fluid mx-auto d-block" style="">
         </div>
         <div class="col-xl-9 col-lg-9" style="/*font-size:20px*/ font-weight: 500;">
         
@@ -217,13 +217,13 @@ if (mysqli_num_rows($result) > 0) {
 
 <!-- The Modal open -->
         <div class="modal fade" data-backdrop="static" id="view">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-xl">
                 <div class="modal-content">
 
                     <!-- Modal Header -->
                     <div class="modal-header">
                         <h5 class="modal-title" id="conthead">PG Details:</h5>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close bg-info" data-dismiss="modal">&times;</button>
                     </div>
 
                     <!-- Modal body -->
@@ -232,9 +232,9 @@ if (mysqli_num_rows($result) > 0) {
                     </div>
 
                     <!-- Modal footer -->
-                    <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div> -->
+                    <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+      </div>
                 </div>
             </div>
         </div>
@@ -250,6 +250,11 @@ $copyYear = 2019; // Set your website start date
 $curYear = date('Y'); // Keeps the second year updated
 echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
 ?>
-<span>&nbsp;Copyright @ Cruze Technologies.&nbsp;</span>
+<div class="d-inline-flex">
+  <div>&nbsp;Copyright @&nbsp;</div>
+  <div>Cruze Technologies.&nbsp;</div>
+</div>
 </div>
 </nav>
+
+

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 28, 2019 at 09:47 AM
+-- Generation Time: Feb 28, 2019 at 04:22 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -161,8 +161,8 @@ CREATE TABLE IF NOT EXISTS `chn_pg_details` (
   `video` text,
   `smoking` int(1) DEFAULT NULL,
   `alcohol` int(1) DEFAULT NULL,
-  `friends` int(1) DEFAULT NULL,
-  `nv` int(1) DEFAULT NULL,
+  `visitors` int(1) DEFAULT NULL,
+  `pets` int(1) DEFAULT NULL,
   `laundry` int(1) DEFAULT NULL,
   `warden` int(1) DEFAULT NULL,
   `room_keeping` int(1) DEFAULT NULL,
@@ -171,9 +171,12 @@ CREATE TABLE IF NOT EXISTS `chn_pg_details` (
   `lift` int(1) DEFAULT NULL,
   `power_backup` int(1) DEFAULT NULL,
   `fridge` int(1) DEFAULT NULL,
-  `geaser` int(1) DEFAULT NULL,
+  `heater` int(1) DEFAULT NULL,
   `locker` int(1) DEFAULT NULL,
   `parking` int(1) DEFAULT NULL,
+  `spycam` int(1) DEFAULT NULL,
+  `firstaid` int(1) DEFAULT NULL,
+  `security` int(1) DEFAULT NULL,
   `map` text,
   UNIQUE KEY `sno` (`sno`),
   KEY `p_id` (`p_id`)
@@ -183,15 +186,15 @@ CREATE TABLE IF NOT EXISTS `chn_pg_details` (
 -- Dumping data for table `chn_pg_details`
 --
 
-INSERT INTO `chn_pg_details` (`sno`, `p_id`, `pic_1`, `pic_2`, `pic_3`, `pic_4`, `video`, `smoking`, `alcohol`, `friends`, `nv`, `laundry`, `warden`, `room_keeping`, `wifi`, `tv`, `lift`, `power_backup`, `fridge`, `geaser`, `locker`, `parking`, `map`) VALUES
-(1, '41-p', '41-p_1', '41-p_2', '41-p_3', '41-p_4', 'https://www.youtube.com/watch?v=x6Q7c9RyMzk', 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>'),
-(2, '42-p', '42-p_1', '42-p_2', '42-p_3', '42-p_4', 'https://www.youtube.com/watch?v=x6Q7c9RyMzk', 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778'),
-(3, '43-p', '43-p_1', '43-p_2', '43-p_3', '43-p_4', 'https://www.youtube.com/watch?v=x6Q7c9RyMzk', 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778'),
-(4, '44-p', '44-p_1', '44-p_2', '44-p_3', '44-p_4', 'https://www.youtube.com/watch?v=x6Q7c9RyMzk', 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778'),
-(5, '37-t', '37-p_1', '37-p_2', '37-p_3', '37-p_4', 'https://www.youtube.com/watch?v=x6Q7c9RyMzk', 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778'),
-(6, '38-t', '38-p_1', '38-p_2', '38-p_3', '38-p_4', 'https://www.youtube.com/watch?v=x6Q7c9RyMzk', 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778'),
-(7, '6-p', '6-p_1', '6-p_2', '6-p_3', '6-p_4', 'https://www.youtube.com/watch?v=x6Q7c9RyMzk', 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778'),
-(8, '9-p', '9-p_1', '9-p_2', '9-p_3', '9-p_4', 'https://www.youtube.com/watch?v=x6Q7c9RyMzk', 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778');
+INSERT INTO `chn_pg_details` (`sno`, `p_id`, `pic_1`, `pic_2`, `pic_3`, `pic_4`, `video`, `smoking`, `alcohol`, `visitors`, `pets`, `laundry`, `warden`, `room_keeping`, `wifi`, `tv`, `lift`, `power_backup`, `fridge`, `heater`, `locker`, `parking`, `spycam`, `firstaid`, `security`, `map`) VALUES
+(1, '41-p', '41-p_1', '41-p_2', NULL, '41-p_4', '<iframe src=\"https://www.youtube.com/embed/oLgzs8nut3A\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>'),
+(2, '42-p', '42-p_1', '42-p_2', '42-p_3', '42-p_4', '<iframe src=\"https://www.youtube.com/embed/KPDhwjmb11o\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>'),
+(3, '43-p', '43-p_1', NULL, '43-p_3', '43-p_4', NULL, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, NULL),
+(4, '44-p', '44-p_1', '44-p_2', '44-p_3', '44-p_4', '<iframe src=\"https://www.youtube.com/embed/oLgzs8nut3A\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>'),
+(5, '37-t', '37-p_1', '37-p_2', '37-p_3', '37-p_4', '<iframe src=\"https://www.youtube.com/embed/oLgzs8nut3A\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>'),
+(6, '38-t', '38-p_1', '38-p_2', '38-p_3', '38-p_4', '<iframe src=\"https://www.youtube.com/embed/oLgzs8nut3A\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>'),
+(7, '6-p', '6-p_1', '6-p_2', '6-p_3', '6-p_4', '<iframe src=\"https://www.youtube.com/embed/oLgzs8nut3A\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>'),
+(8, '9-p', '9-p_1', '9-p_2', '9-p_3', '9-p_4', '<iframe src=\"https://www.youtube.com/embed/oLgzs8nut3A\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.31236233014!2d80.16386753431622!3d13.028912655003268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91614f29dd66e091!2sCruze+El+Barato+-+PG+For+Men+in+Porur!5e0!3m2!1sen!2sin!4v1551300301778\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>');
 
 --
 -- Indexes for dumped tables

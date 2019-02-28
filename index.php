@@ -70,7 +70,7 @@ return false;
 
 
 <div class="bg-light container-fluid">
-	<div class="pt-5"><img class="img-fluid mx-auto d-block border border-info" src="img/1.jpg" width="200px" height="auto" alt="logo"></div>
+	<div class="pt-5"><img class="img-fluid mx-auto d-block border border-info" src="img/1.JPG" width="200px" height="auto" alt="logo"></div>
 	
 </div>
 <!-- nav open -->
@@ -80,7 +80,7 @@ return false;
 			<div class="input-group-prepend">
 				<button class="btn btn-info" type="button"><strong>Chennai</strong></button> 
 			</div>
-			<input type="text" id="search"  placeholder="Enter Area or Street Name" class="form-control form-control-lg text-capitalize text-monospace" value="Porur" autofocus autocomplete="off" spellcheck="false" />
+			<input type="text" id="search"  placeholder="Enter Area or Street Name" class="form-control form-control-lg text-capitalize text-monospace" autofocus autocomplete="off" spellcheck="false" />
 			<div class="input-group-append">
 				<button class="btn btn-info" id="subm" type="submit"><img src="img/search.svg" width="32px" height="auto" class="img-fluid"></button> 
 			</div>
