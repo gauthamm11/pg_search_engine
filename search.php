@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 require "conn.php";
 if (!isset($_GET['search'])) {
     header("location: index.php");
@@ -8,9 +9,26 @@ if (!isset($_GET['search'])) {
 <script>
 $(document).ready(function () {
 
+var lodSpin = '<center class="mt-3 mb-3"><div class="spinner-grow text-muted mr-sm-5"></div><div class="spinner-grow text-primary mr-sm-5"></div><div class="spinner-grow text-success mr-sm-5"></div><div class="spinner-grow text-info mr-sm-5"></div><div class="spinner-grow text-warning mr-sm-5"></div><div class="spinner-grow text-danger mr-sm-5"></div><div class="spinner-grow text-secondary mr-sm-5"></div><div class="spinner-grow text-dark"></div></center>';
+
 $(".viewc").click(function () {
+var pid = $(this).attr('data-value1');
+var title = $(this).attr('data-value2');
 $("#view").modal();
-//alert($(this).attr('data-value'));
+$('#conthead').html('<i class="fas fa-building fa-fw text-info"></i>&nbsp;<span class="text-info">' + title + '</span>');
+$('#viewbody').html(lodSpin);
+// ajax open
+$.ajax({
+    type: "GET",
+    url: 'details.php',
+    data: { pid: pid },
+    success: function (data) {
+      $('#conthead').html('<i class="fas fa-building fa-fw text-info"></i>&nbsp;<span class="text-info">' + title + '</span>');
+      $("#viewbody").html(data);
+   // $("#viewbody").html(pid);
+}
+});
+// ajax close
 });
 
 return false;
@@ -175,7 +193,7 @@ if (mysqli_num_rows($result) > 0) {
 
         </div>
         
-      <button type="button" class="btn btn-info btn-block viewc" data-value="'.$row["p_id"].'"><b>View Full Details&nbsp;<i class="fas fa-eye"></i></b></button>
+      <button type="button" class="btn btn-info btn-block viewc" data-value1="'.$row["p_id"].'" data-value2="'.$row["p_name"].'"><b>View Full Details&nbsp;<i class="fas fa-eye"></i></b></button>
         </div>
         ';
         echo '</div></div>';
@@ -204,13 +222,13 @@ if (mysqli_num_rows($result) > 0) {
 
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h5 class="modal-title">PG Details:</h5>
+                        <h5 class="modal-title" id="conthead">PG Details:</h5>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
                     <!-- Modal body -->
                     <div class="modal-body" id="viewbody">
-                       <center class="my-5"><div class="spinner-grow text-muted mr-sm-5"></div><div class="spinner-grow text-primary mr-sm-5"></div><div class="spinner-grow text-success mr-sm-5"></div><div class="spinner-grow text-info mr-sm-5"></div><div class="spinner-grow text-warning mr-sm-5"></div><div class="spinner-grow text-danger mr-sm-5"></div><div class="spinner-grow text-secondary mr-sm-5"></div><div class="spinner-grow text-dark"></div></center>
+                      
                     </div>
 
                     <!-- Modal footer -->

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 27, 2019 at 09:32 PM
+-- Generation Time: Feb 28, 2019 at 09:47 AM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -126,16 +126,16 @@ INSERT INTO `chn_pg` (`sno`, `p_id`, `a_id`, `p_name`, `p_type`, `p_landmark`, `
 (36, '34', 'CHN_OMR_002', 'Rasaratnakara', 1, 'Behind DLF', 5200, 7000, '2', 5, 2, 9, '2019-02-07 01:48:00', NULL, NULL),
 (37, '35', 'CHN_OMR_002', 'Atreya Samhita', 0, 'Behind DLF', 5200, 7500, '1', 4, 1, 8.5, '2019-02-19 05:47:00', NULL, NULL),
 (38, '36-t', 'CHN_TNAG_001', 'Susruta Samhita', 1, 'Behind DLF', 5200, 7000, '1.5', 3, 2, 6, '2019-02-15 05:47:00', NULL, NULL),
-(39, '37-t', 'CHN_TNAG_001', 'Charak', 0, 'Behind DLF', 5200, 7500, '1', 2, 1, 7.5, '2019-02-15 05:47:00', NULL, NULL),
+(39, '37-t', 'CHN_TNAG_001', 'Charaka', 0, 'Behind DLF', 5200, 7500, '1', 2, 1, 7.5, '2019-02-15 05:47:00', NULL, NULL),
 (40, '38-t', 'CHN_TNAG_001', 'Charak Samhita', 1, 'Behind DLF', 5200, 7000, '1.5', 1, 2, 9, '2019-02-15 05:47:00', NULL, NULL),
 (41, '39-t', 'CHN_TNAG_001', 'Patanjali', 0, 'Behind DLF', 5200, 7500, '1', 5, 1, 8, '2019-02-19 01:48:00', NULL, NULL),
 (5, '4-t', 'CHN_TNAG_001', 'Srinivasa Ramanujan', 1, 'Behind DLF', 5200, 7000, '1.5', 4, 2, 7.5, '2019-02-19 01:48:00', NULL, NULL),
 (42, '40', 'CHN_VEL_001', 'Mahabhasaya', 0, 'Behind DLF', 5200, 7500, '1', 3, 1, 8, '2019-02-19 01:48:00', NULL, NULL),
-(44, '41-p', 'CHN_POR_001', 'Agasthya', 1, 'Behind DLF', 5200, 7500, '1.5', 2, 2, 9, '2019-02-15 05:47:00', NULL, NULL),
-(45, '42-p', 'CHN_POR_001', 'Bharadvaja', 0, 'Behind DLF', 5200, 7500, '1', 1, 1, 8, '2019-02-05 06:38:00', NULL, NULL),
+(44, '41-p', 'CHN_POR_001', 'Srinivasa Ramanujan', 1, 'Behind DLF', 5200, 7500, '1.5', 2, 2, 9, '2019-02-15 05:47:00', NULL, NULL),
+(45, '42-p', 'CHN_POR_001', 'A P J Abdul Kalam', 0, 'Behind DLF', 5200, 7500, '1', 1, 1, 8, '2019-02-05 06:38:00', NULL, NULL),
 (46, '43-p', 'CHN_POR_001', 'Gautama Maharishi', 1, 'Behind DLF', 5200, 7000, '1.5', 5, 2, 7.5, '2019-02-05 06:38:00', NULL, NULL),
-(47, '44-p', 'CHN_POR_001', 'Jamadagni', 0, 'Behind DLF', 5000, 7500, '1', 4, 1, 6, '2019-02-05 06:38:00', NULL, NULL),
-(48, '45-p', 'CHN_POR_001', 'Kashyapa', 1, 'Behind DLF', 5200, 7000, '1.5', 3, 2, 8.5, '2019-02-13 06:38:00', NULL, NULL),
+(47, '44-p', 'CHN_POR_001', 'Mokshagundam Visvesvaraya', 0, 'Behind DLF', 5000, 7500, '1', 4, 1, 6, '2019-02-05 06:38:00', NULL, NULL),
+(48, '45-p', 'CHN_POR_001', 'C V Raman', 1, 'Behind DLF', 5200, 7000, '1.5', 3, 2, 8.5, '2019-02-13 06:38:00', NULL, NULL),
 (49, '46', 'CHN_VAD_001', 'Vasistha', 0, 'Behind DLF', 5000, 7500, '1', 2, 1, 8, '2019-02-13 06:38:00', NULL, NULL),
 (50, '47', 'CHN_VEL_001', 'Vishwamitra', 1, 'Behind DLF', 5200, 7000, '1.5', 1, 2, 9, '2019-02-05 06:38:00', NULL, NULL),
 (6, '5', 'CHN_VEL_001', 'Satyendra Nath Bose', 0, 'Behind DLF', 5200, 7000, '1', 5, 1, 7.5, '2019-02-03 06:38:00', NULL, NULL),
